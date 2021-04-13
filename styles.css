@@ -21,7 +21,68 @@
     font-weight : 400, 700*/
 
 body {
+    font-family: 'Karla', sans-serif;
     font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.container {
+    padding 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px
+}
+
+.flex {
+    display: flex;
+}
+
+.flex > div {
+    flex: 1;
+}
+
+/* Nav Styling */
+nav {
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav li a {
+    color: var(--dark-grayish-violet);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Header Styling */
+header {
+
+}
+
+/* Section Styling */
+section {
+
+}
+
+/* Footer Styling */
+footer {
+
 }
 
 .attribution { 
