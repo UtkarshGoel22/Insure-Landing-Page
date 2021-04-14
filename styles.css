@@ -29,14 +29,60 @@ h1, h2, h3 {
     font-family: 'DM Serif Display', serif;
 }
 
+h1, h2 { 
+    font-size: 4.3rem;
+    font-weight: 400;
+    position: relative;
+    line-height: 1;
+    margin: 0;
+    padding-top: 50px;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    opacity: 0.5;
+}
+
+.line-grey::before {
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 150px;
+}
+
+.line-violet::before {
+    content: '';
+    background-color: var(--dark-violet);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 150px;
+}
+
 .btn {
-    padding: 10px 15px;
+    padding: 15px 25px;
     border: 2px solid white;
     background-color: transparent;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn-reverse {
+    border-color: var(--dark-violet);
+    color: var(--dark-violet);
 }
 
 .container {
-    padding 20px;
+    padding: 20px;
     margin: 0 auto;
     max-width: 100%;
     width: 1200px
@@ -44,17 +90,19 @@ h1, h2, h3 {
 
 .flex {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .flex > div {
     flex: 1;
 }
 
-/* Nav Styling */
-nav {
-
+.align-start {
+    align-items: flex-start;
 }
 
+/* Nav Styling */
 nav ul {
     display: flex;
     list-style: none;
@@ -72,17 +120,113 @@ nav li a {
 
 /* Header Styling */
 header {
+    background-color: var(--dark-violet);
+    color: var(--very-light-gray);
+    position: relative;
+    margin-bottom: 290px;
+}
 
+header * {
+    z-index: 1;
+}
+
+header::after {
+    content: '';
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+header::before {
+    content: '';
+    background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    bottom: -64%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.family {
+    margin-bottom: -175px;
 }
 
 /* Section Styling */
-section {
+.dark-violet {
+    background-color: var(--dark-violet);
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40% 100%;
+    padding: 70px;
+    position: relative;
+    margin: 100px auto;
+}
 
+.dark-violet h2 {
+    font-size: 3.5rem;
+    padding: 0;
+    width: 57%;
+    color: var(--very-light-gray);
+}
+
+.tile {
+    margin-top: 80px;
+}
+
+.tile h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Footer Styling */
 footer {
+    background-color: var(--very-light-gray);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px 0;
+    position: relative;
+}
 
+footer h4 {
+    font-size: .9rem;
+    color: var(--dark-grayish-violet);
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.footer-top li {
+    margin-left: 15px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer li a {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--dark-violet);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--grayish-blue);
 }
 
 .attribution { 
