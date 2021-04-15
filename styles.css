@@ -126,6 +126,15 @@ header {
     margin-bottom: 290px;
 }
 
+.heading-top {
+    margin-top: 50px;
+}
+
+.heading-top p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 header * {
     z-index: 1;
 }
@@ -140,6 +149,7 @@ header::after {
     right: 0;
     height: 100%;
     width: 50%;
+    z-index: 2;
 }
 
 header::before {
@@ -209,7 +219,7 @@ footer ul {
     list-style: none;
 }
 
-.footer-top li {
+footer ul.flex li:not(:first-child) {
     margin-left: 15px;
 }
 
@@ -235,4 +245,24 @@ footer li a {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 953px) {
+    body {
+        text-align: center;
+    }
+    footer {
+        background-image: url(./images/bg-pattern-footer-mobile.svg);
+        background-size: 100% auto;
+        background-position: top center;
+    }
+    footer ul.flex {
+        flex-direction: row;
+    }
+    footer .flex div {
+        width: 100%;
+    }
+    .flex {
+        flex-direction: column;
+    }
 }
