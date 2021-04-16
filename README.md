@@ -41,7 +41,6 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
 
 ### Useful resources
 
